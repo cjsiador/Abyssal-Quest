@@ -3,18 +3,19 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - EntitiesManager
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Boids
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Predators
+  - Obstacles
+  - BoidsObstacles
+  - PredatorsObstacles
   - 
   - 
   - 
