@@ -20,9 +20,30 @@ public class WebcamPhotoSpawner : MonoBehaviour
     public int requestedHeight = 720;
     public int requestedFPS = 30;
 
+    [Header("Debug")]
+    public bool capturePicture;
+    public bool CapturePicture
+    { 
+        get 
+        { 
+            return capturePicture; 
+        }  
+        set
+        {
+            if (capturePicture != value)
+            {
+                capturePicture = value;
+                if (value == true)
+                {
+                    CaptureAndSpawn();
+                }
+            }
+        } 
+    }
+
     WebCamTexture _webcam;
     int _spawnCount = 0;
-    static readonly int MainTexId = Shader.PropertyToID("_MainTex");
+    static readonly int BaseMapId = Shader.PropertyToID("_BaseMap");
 
     IEnumerator Start()
     {
@@ -31,6 +52,14 @@ public class WebcamPhotoSpawner : MonoBehaviour
             yield return Application.RequestUserAuthorization(UserAuthorization.WebCam);
 
         StartPreview();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            CapturePicture = !CapturePicture;
+        }
     }
 
     public void StartPreview(int deviceIndex = 0)
@@ -82,30 +111,32 @@ public class WebcamPhotoSpawner : MonoBehaviour
     {
         yield return new WaitForEndOfFrame();
 
-        // Copy current webcam frame into a new Texture2D (unique per instance)
         Texture2D photo = new Texture2D(_webcam.width, _webcam.height, TextureFormat.RGBA32, false);
         photo.SetPixels32(_webcam.GetPixels32());
         photo.Apply(false, false);
 
-        // (Optional) Save to disk
-        // string path = Path.Combine(Application.persistentDataPath, $"photo_{System.DateTime.Now:yyyyMMdd_HHmmss}.png");
-        // File.WriteAllBytes(path, photo.EncodeToPNG());
-        // Debug.Log($"Saved: {path}");
+        string dir = Path.Combine(Application.persistentDataPath, "Photos");
+        Directory.CreateDirectory(dir);
+
+        string path = Path.Combine(dir, $"photo_{System.DateTime.Now:yyyyMMdd_HHmmss}.png");
+        File.WriteAllBytes(path, photo.EncodeToPNG());
+        Debug.Log($"Saved: {path}");
 
         // Spawn an instance and apply texture via MaterialPropertyBlock
         GameObject go = Instantiate(photoPrefab, NextGridPosition(_spawnCount), Quaternion.identity, parentForInstances);
-        Renderer r = go.GetComponentInChildren<Renderer>();
-        if (!r)
+        
+        var data = go.GetComponent<PhotoPrefabData>();
+        if (data == null || data.fishRenderer == null)
         {
-            Debug.LogWarning("Spawned prefab has no Renderer. Texture not applied.");
+            Debug.LogWarning("PhotoPrefabData or fishRenderer missing.");
+            yield return null;
         }
-        else
-        {
-            var mpb = new MaterialPropertyBlock();
-            r.GetPropertyBlock(mpb);
-            mpb.SetTexture(MainTexId, photo);
-            r.SetPropertyBlock(mpb);
-        }
+
+        var r = data.fishRenderer;                      
+        var mpb = new MaterialPropertyBlock();
+        r.GetPropertyBlock(mpb);
+        mpb.SetTexture(BaseMapId, photo);               
+        r.SetPropertyBlock(mpb);
 
         _spawnCount++;
     }
