@@ -119,63 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &11328309
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2353198770067409015, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_Name
-      value: Banner
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.777
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.513
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 3.2537065
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8778072810629984632, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
 --- !u!1001 &13844305
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7351,7 +7294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WebcamPhotoSpawner
   previewUI: {fileID: 1509796506}
-  photoPrefab: {fileID: 7630525652740795340, guid: c1bb22da811656745b89ee9df680826f, type: 3}
+  photoPrefab: {fileID: 7107800485949960534, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
   parentForInstances: {fileID: 71404633}
   gridCols: 5
   gridSpacing: 1.25
@@ -13196,7 +13139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1509796506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17665,6 +17608,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c6c71596b643c346a26cac67886adea, type: 3}
+--- !u!1001 &8459154784866698472
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5291985832812549393, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7107800485949960534, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
+      propertyPath: m_Name
+      value: Photo Banner Fish
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e0a7f7ca3b520df49899d1085b3f717d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -17681,6 +17681,6 @@ SceneRoots:
   - {fileID: 1757233401}
   - {fileID: 1668905706}
   - {fileID: 543450652059780939}
-  - {fileID: 11328309}
   - {fileID: 791347441}
   - {fileID: 71404633}
+  - {fileID: 8459154784866698472}
