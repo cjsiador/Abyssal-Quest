@@ -153,11 +153,11 @@ public class EntitiesManagerScript : MonoBehaviour
             numberOfBoids - currentNbBoids,
             EntityType.BOID
         );
+        */
         AdjustNbEntities(
             numberOfPredators - currentNbPredators,
             EntityType.PREDATOR
-        );
-        */
+        );    
     }
 
     private void OnValidate()

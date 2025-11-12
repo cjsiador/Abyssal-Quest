@@ -34,6 +34,7 @@ public class TextureReceiver : MonoBehaviour
         await websocket.Connect();
     }
 
+    public int numToAdd = 1;
     IEnumerator CreateTexture(string user, string base64, int id)
     {
         byte[] bytes = Convert.FromBase64String(base64.Replace("data:image/png;base64,", ""));
@@ -44,7 +45,7 @@ public class TextureReceiver : MonoBehaviour
 
         mat.mainTexture = tex;
         Debug.Log("Spawning " + user + "'s Fish");
-        managerScript.SpawnBoidsWithTexture(5, EntityType.BOID, mat, id);
+        managerScript.SpawnBoidsWithTexture(numToAdd, EntityType.BOID, mat, id);
 
         yield return null;
     }
