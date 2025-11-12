@@ -6,7 +6,7 @@ public class BoidScript : EntityScript
 
     protected override void InitParams()
     {
-        parameters = entitiesManager.boidsParams;
+        if (parameters == null) parameters = entitiesManager.boidsParams;
         boidsParams = (BoidsParameters)parameters;
     }
 

@@ -906,12 +906,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521472939}
   serializedVersion: 2
-  m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0.2, y: 18.29, z: 38.3}
-  m_LocalScale: {x: 8.422732, y: 1, z: 3.2078}
+  m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
+  m_LocalPosition: {x: 0.05, y: 2.75, z: -0.4250002}
+  m_LocalScale: {x: 2.105683, y: 0.25, z: 0.80195}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1817428883}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!1 &722909692
 GameObject:
@@ -1232,10 +1232,10 @@ MonoBehaviour:
   timeScale: 1
   calculationInterval: 10
   smoothnessRadiusOffset: 1
-  numberOfBoids: 200
-  numberOfPredators: 1
-  boidsParams:
-    prefab: {fileID: 6344359519432126883, guid: ab7c1935bfaca5842af297cf4f8610cc, type: 3}
+  numberOfBoids: 0
+  numberOfPredators: 0
+  allFish:
+  - prefab: {fileID: 6968800472965017856, guid: 60726741e51a4c646ab326f7da0203f6, type: 3}
     scaleVariations: 0.2
     spawnAreaGO: {fileID: 225068829}
     spawnArea: {fileID: 225068831}
@@ -1263,17 +1263,688 @@ MonoBehaviour:
     defaultState: 0
     boneBaseDistanceToHead:
     - 0
-    - 0.6161258
-    - 1.2213886
-    - 1.7954344
-    - 2.303578
-    nbTransformsToStore: 35
+    - 0.07863771
+    - 0.22723593
+    - 0.3573112
+    - 0.5088808
+    nbTransformsToStore: 8
     boneBaseRotation:
-    - {x: -0.50000006, y: 0.50000006, z: -0.4999999, w: 0.50000006}
-    - {x: -0.50000006, y: 0.4999999, z: -0.50000006, w: 0.50000006}
-    - {x: -0.50000006, y: 0.4999999, z: -0.50000006, w: 0.50000006}
-    - {x: -0.50000006, y: 0.4999999, z: -0.50000006, w: 0.50000006}
-    - {x: -0.50000006, y: 0.4999999, z: -0.50000006, w: 0.50000006}
+    - {x: -0.49771056, y: 0.5022758, z: -0.49788898, w: 0.50210536}
+    - {x: -0.4999112, y: 0.5000856, z: -0.50008893, w: 0.49991438}
+    - {x: -0.5593058, y: 0.43263593, z: -0.5594604, w: 0.43244353}
+    - {x: -0.5674789, y: 0.42185855, z: -0.5676298, w: 0.42166317}
+    - {x: -0.5668468, y: 0.42270738, z: -0.566998, w: 0.4225123}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 1052883716163791402, guid: 296ccaa862849414c9a0ee05bf2c4583, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.8737793
+    - 1.9349933
+    - 2.8071601
+    - 3.8429813
+    nbTransformsToStore: 58
+    boneBaseRotation:
+    - {x: -0.48437682, y: 0.5151495, z: -0.4845567, w: 0.51498055}
+    - {x: -0.48086965, y: 0.51842475, z: -0.48105073, w: 0.5182571}
+    - {x: -0.4919467, y: 0.5079255, z: -0.49212408, w: 0.507754}
+    - {x: -0.48556036, y: 0.51403403, z: -0.4857399, w: 0.5138648}
+    - {x: -0.48299402, y: 0.5164463, z: -0.48317426, w: 0.5162779}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 7085106055075365400, guid: f7ccb16d23ce34d4ea4535870902ee91, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.4483741
+    - 0.8891622
+    - 1.4483027
+    - 1.9140546
+    nbTransformsToStore: 29
+    boneBaseRotation:
+    - {x: -0.4676515, y: 0.5303792, z: -0.4678368, w: 0.5302158}
+    - {x: -0.487324, y: 0.51236254, z: -0.48750308, w: 0.51219225}
+    - {x: -0.5008017, y: 0.49919719, z: -0.5009762, w: 0.49902204}
+    - {x: -0.48358214, y: 0.5158957, z: -0.48376238, w: 0.5157267}
+    - {x: -0.48362264, y: 0.51585776, z: -0.4838028, w: 0.51568884}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 3792627990255360947, guid: 1c2c02330a596fa409357a271ff8a37d, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.43910673
+    - 0.9711421
+    - 1.4080538
+    - 1.7970258
+    nbTransformsToStore: 27
+    boneBaseRotation:
+    - {x: -0.49182305, y: 0.50804543, z: -0.4920004, w: 0.5078736}
+    - {x: -0.47983047, y: 0.5193868, z: -0.480012, w: 0.51921916}
+    - {x: -0.49301723, y: 0.5068866, z: -0.4931943, w: 0.50671434}
+    - {x: -0.4947581, y: 0.5051876, z: -0.4949346, w: 0.50501466}
+    - {x: -0.49341992, y: 0.5064947, z: -0.493597, w: 0.50632215}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 7875023825931642258, guid: 058613bfa60883f4391cf283b9df4c43, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.14902253
+    - 0.2647754
+    - 0.41694462
+    - 0.5725789
+    nbTransformsToStore: 9
+    boneBaseRotation:
+    - {x: -0.44976637, y: 0.5456281, z: -0.44995716, w: 0.5454712}
+    - {x: -0.4890892, y: 0.5106776, z: -0.48926783, w: 0.51050687}
+    - {x: -0.49991262, y: 0.50008726, z: -0.5000877, w: 0.4999128}
+    - {x: -0.50782603, y: 0.49204934, z: -0.50799835, w: 0.4918721}
+    - {x: -0.5094319, y: 0.49038655, z: -0.50960374, w: 0.49020866}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 2890788373138361051, guid: 49c0ed1cfcdfc8541acb22558c923ee4, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.98183525
+    - 1.7494029
+    - 2.6751807
+    - 3.6027498
+    nbTransformsToStore: 55
+    boneBaseRotation:
+    - {x: -0.45145825, y: 0.5442293, z: -0.45164824, w: 0.5440716}
+    - {x: -0.49798563, y: 0.5020064, z: -0.49816093, w: 0.50183237}
+    - {x: -0.49991262, y: 0.5000874, z: -0.5000874, w: 0.49991262}
+    - {x: -0.49991262, y: 0.50008744, z: -0.5000874, w: 0.49991253}
+    - {x: -0.5026678, y: 0.49731806, z: -0.5028416, w: 0.49714223}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 2925167833693244901, guid: aa6665bb08663fb4ebaf4b56551f2af8, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.91853434
+    - 1.858463
+    - 2.9823477
+    - 3.975088
+    nbTransformsToStore: 60
+    boneBaseRotation:
+    - {x: -0.46479976, y: 0.53287935, z: -0.46498632, w: 0.53271806}
+    - {x: -0.4727714, y: 0.5258199, z: -0.47295558, w: 0.5256557}
+    - {x: -0.50082755, y: 0.49917042, z: -0.50100243, w: 0.49899626}
+    - {x: -0.4915118, y: 0.50834584, z: -0.49168986, w: 0.508175}
+    - {x: -0.5081935, y: 0.4916693, z: -0.50836587, w: 0.4914927}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 2793325807402657366, guid: c85397dec43336e4eb582ec75d271ee0, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.06736747
+    - 0.14030007
+    - 0.22659504
+    - 0.31572077
+    nbTransformsToStore: 5
+    boneBaseRotation:
+    - {x: -0.4982392, y: 0.5017524, z: -0.49841654, w: 0.5015807}
+    - {x: -0.4999116, y: 0.50008607, z: -0.50008845, w: 0.4999139}
+    - {x: -0.4999117, y: 0.500086, z: -0.50008845, w: 0.49991393}
+    - {x: -0.48566613, y: 0.51393205, z: -0.48584765, w: 0.513765}
+    - {x: -0.49483562, y: 0.5051094, z: -0.49501407, w: 0.5049391}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 7058854783725994927, guid: df2dde60bff21cd4d958c72fb3b70668, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.16340478
+    - 0.2845917
+    - 0.43803847
+    - 0.5755393
+    nbTransformsToStore: 9
+    boneBaseRotation:
+    - {x: -0.47427016, y: 0.52446926, z: -0.4744529, w: 0.52430373}
+    - {x: -0.48989803, y: 0.50990206, z: -0.4900759, w: 0.509731}
+    - {x: -0.50766283, y: 0.4922182, z: -0.5078347, w: 0.49204066}
+    - {x: -0.49991274, y: 0.5000875, z: -0.5000873, w: 0.49991265}
+    - {x: -0.4556196, y: 0.5407504, z: -0.4558082, w: 0.5405912}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  - prefab: {fileID: 2654251511925357154, guid: 67511b4df2dc3c6429eef19d555493e6, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.09187596
+    - 0.22889464
+    - 0.3543759
+    - 0.48097438
+    nbTransformsToStore: 8
+    boneBaseRotation:
+    - {x: -0.49563682, y: 0.5043195, z: -0.49581897, w: 0.5041525}
+    - {x: -0.4587517, y: 0.53809, z: -0.45894524, w: 0.53793645}
+    - {x: -0.47136077, y: 0.5270797, z: -0.4715506, w: 0.52692163}
+    - {x: -0.4955042, y: 0.5044497, z: -0.4956866, w: 0.5042827}
+    - {x: -0.49025914, y: 0.5095489, z: -0.49044317, w: 0.50938374}
+    animationFirstBone: 1
+    avoidanceDirectionPreferences:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    separationBaseWeight: 0.7
+    alignmentBaseWeight: 1
+    cohesionBaseWeight: 1
+    fearBaseWeight: 3
+    separationRadius: 1.5
+    cohesionRadius: 3.5
+    fearRadius: 10
+    squaredSeparationRadius: 2.25
+    squaredCohesionRadius: 12.25
+    squaredFearRadius: 100
+    squaredFullSeparationRadius: 0.25
+    squaredFullCohesionRadius: 20.25
+    squaredFullFearRadius: 81
+    idealNbNeighbors: 6
+    nbBoidsNearbyToBeAlone: 3
+    normalVelocity: 5
+    aloneVelocity: 8
+    afraidVelocity: 11
+  boidsParams:
+    prefab: {fileID: 6968800472965017856, guid: 60726741e51a4c646ab326f7da0203f6, type: 3}
+    scaleVariations: 0.2
+    spawnAreaGO: {fileID: 225068829}
+    spawnArea: {fileID: 225068831}
+    raycastBaseDistance: 10
+    obstacleBaseMargin: 3
+    applyVelocityFactor: 1
+    obstaclesLayerMask:
+      serializedVersion: 2
+      m_Bits: 384
+    acceleration: 7.5
+    emergencyAcceleration: 30
+    velocityBonusFactorChangePeriod: 5
+    nbCalculationsBetweenVelocityBonusFactorChange: 25
+    minVelocityBonusFactor: 0.8
+    maxVelocityBonusFactor: 1.2
+    rwStatePeriod: 5
+    rwMomentumWeight: 1
+    rwProbaStraightLine: 0.2
+    rwVerticalRestriction: 0.5
+    rwMaxAttempts: 3
+    visionDistance: 8
+    visionSemiAngle: 100
+    cosVisionSemiAngle: -0.1736482
+    momentumWeight: 1.7
+    defaultState: 0
+    boneBaseDistanceToHead:
+    - 0
+    - 0.07863771
+    - 0.22723593
+    - 0.3573112
+    - 0.5088808
+    nbTransformsToStore: 8
+    boneBaseRotation:
+    - {x: -0.49771056, y: 0.5022758, z: -0.49788898, w: 0.50210536}
+    - {x: -0.4999112, y: 0.5000856, z: -0.50008893, w: 0.49991438}
+    - {x: -0.5593058, y: 0.43263593, z: -0.5594604, w: 0.43244353}
+    - {x: -0.5674789, y: 0.42185855, z: -0.5676298, w: 0.42166317}
+    - {x: -0.5668468, y: 0.42270738, z: -0.566998, w: 0.4225123}
     animationFirstBone: 1
     avoidanceDirectionPreferences:
     - 1
@@ -1373,7 +2044,7 @@ MonoBehaviour:
     probaChillingAfterHunting: 0.03333332
     probaHuntingAfterAttacking: 0.8
     percentagePreysToAttack: 0.15
-    nbPreysToAttack: 30
+    nbPreysToAttack: 10
     chillingVelocity: 6
     huntingVelocity: 8
     attackingVelocity: 20
@@ -2024,6 +2695,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 1
+--- !u!1 &1674677779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1674677780}
+  - component: {fileID: 1674677781}
+  m_Layer: 0
+  m_Name: Receiver
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1674677780
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674677779}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 11.29, z: 34.91}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674677781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674677779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0929c25fa9d39aa43a4727d55ae84591, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClassroomTextureReceiver
+  baseMat: {fileID: 2100000, guid: da06d2a17ec32444d9780f6937d34b0e, type: 2}
+  managerScript: {fileID: 964278842}
 --- !u!1 &1795464955
 GameObject:
   m_ObjectHideFlags: 0
@@ -2198,6 +2915,7 @@ Transform:
   - {fileID: 363615988}
   - {fileID: 116514135}
   - {fileID: 225068830}
+  - {fileID: 521472942}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1873800845
@@ -2226,23 +2944,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.75248
+      value: -0.76778865
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.037
+      value: 37.145702
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071067
+      value: 0.5470834
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: -0.83707815
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2250,7 +2968,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -113.666
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78bdd421595f6234daf24b6723b386c3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -2558,8 +3276,8 @@ SceneRoots:
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 964278843}
+  - {fileID: 1674677780}
   - {fileID: 1575189700}
   - {fileID: 1817428883}
   - {fileID: 543450651842550540}
   - {fileID: 1873800845}
-  - {fileID: 521472942}

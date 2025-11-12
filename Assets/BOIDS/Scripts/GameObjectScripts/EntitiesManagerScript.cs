@@ -22,6 +22,9 @@ public class EntitiesManagerScript : MonoBehaviour
     private int numberOfPredators;
 
     [Space]
+    public BoidsParameters[] allFish;
+
+    [Space]
     public BoidsParameters boidsParams;
 
     [Space]
@@ -145,7 +148,7 @@ public class EntitiesManagerScript : MonoBehaviour
     {
         if (EntitiesMovement)
             clock++;
-
+        /*
         AdjustNbEntities(
             numberOfBoids - currentNbBoids,
             EntityType.BOID
@@ -154,6 +157,7 @@ public class EntitiesManagerScript : MonoBehaviour
             numberOfPredators - currentNbPredators,
             EntityType.PREDATOR
         );
+        */
     }
 
     private void OnValidate()
@@ -168,6 +172,10 @@ public class EntitiesManagerScript : MonoBehaviour
     /// <summary>Pre-calculate all the entities parameters that require it.</summary>
     private void PreCalculateParameters()
     {
+        foreach(BoidsParameters param in allFish)
+        {
+            param.PreCalculateParameters(calculationInterval, smoothnessRadiusOffset, numberOfBoids);
+        }
         boidsParams.PreCalculateParameters(
             calculationInterval, smoothnessRadiusOffset, numberOfBoids
         );
@@ -330,4 +338,48 @@ public class EntitiesManagerScript : MonoBehaviour
         foreach (GameObject predator in predators)
             AdjustOnePredatorCollider(predator);
     }
+
+    public void SpawnBoidsWithTexture(int nbToSpawn, EntityType type, Material mat, int entityId)
+    {
+        GameObject entityPrefab = (type == EntityType.BOID) ?
+            allFish[entityId].prefab : predatorsParams.prefab;
+        List<GameObject> entitiesList = (type == EntityType.BOID) ?
+            boids : predators;
+        float verticalRestriction = (type == EntityType.BOID) ?
+            allFish[entityId].rwVerticalRestriction : predatorsParams.rwVerticalRestriction;
+
+        for (int _ = 0; _ < nbToSpawn; _++)
+        {
+            Vector3 entityDirection = MathHelpers.
+                GetRandomDirection(verticalRestriction);
+            Quaternion entityRotation = Quaternion.LookRotation(entityDirection);
+            Vector3 entityPosition = GetRandomSpawnablePositionInArea(type);
+            
+            GameObject entity = Instantiate(
+                entityPrefab,
+                entityPosition,
+                entityRotation,
+                gameObject.transform
+            );
+
+            entity.GetComponent<EntityScript>().parameters = allFish[entityId];
+            entity.GetComponentInChildren<SkinnedMeshRenderer>().material = mat;
+
+            Collider entityCollider = entity.GetComponent<Collider>();
+            if (entityCollider == null)
+                throw new MissingComponentException(
+                    "No Collider component on Entity."
+                );
+
+            colliderToEntityType[entityCollider] = type;
+            colliderToDirection[entityCollider] = entityDirection;
+            colliderToPosition[entityCollider] = entityPosition;
+
+            SetEntityScale(entity, type);
+            entitiesList.Add(entity);
+        }
+
+        IncrCurrentNbEntities(nbToSpawn, type);
+    }
+
 }

@@ -6,9 +6,8 @@ public abstract class EntityScript : MonoBehaviour
 {
     private static int nextId = 0;
 
-
     protected EntitiesManagerScript entitiesManager;
-    protected EntityParameters parameters;
+    public EntityParameters parameters;
     protected int visionDistance;
 
     protected State state;
