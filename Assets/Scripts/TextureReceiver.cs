@@ -50,7 +50,15 @@ public class TextureReceiver : MonoBehaviour
         yield return null;
     }
 
-    void Update() => websocket.DispatchMessageQueue();
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            managerScript.SpawnBoidsWithTexture(numToAdd, EntityType.BOID, baseMat, UnityEngine.Random.Range(0,10));
+        }
+        websocket.DispatchMessageQueue();
+
+    }
 
     private async void OnApplicationQuit() => await websocket.Close();
 }

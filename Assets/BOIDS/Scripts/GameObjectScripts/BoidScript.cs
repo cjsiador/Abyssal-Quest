@@ -55,10 +55,14 @@ public class BoidScript : EntityScript
                     boidCohesionWeight = boidWeight * cohesionPortion;
 
                 weightedNbBoidsSeparation += boidSeparationWeight;
+                separationPositionSum += boidSeparationWeight * entityPosition;
+
+                if (entityCollider.CompareTag(gameObject.tag) == false)
+                    continue;
+
                 weightedNbBoidsAlignment += boidAlignmentWeight;
                 weightedNbBoidsCohesion += boidCohesionWeight;
 
-                separationPositionSum += boidSeparationWeight * entityPosition;
                 cohesionPositionSum += boidCohesionWeight * entityPosition;
                 alignmentDirectionSum += boidAlignmentWeight * boidDirection;
             }
