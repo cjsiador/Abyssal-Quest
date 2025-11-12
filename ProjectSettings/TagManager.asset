@@ -3,18 +3,29 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - EntitiesManager
+  - Bannerfish
+  - BicolorAngel
+  - BlueTang
+  - Clownfish
+  - Copperband
+  - Discus
+  - EmperorAngel
+  - Fusilier
+  - Longnose
+  - Saddle
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Boids
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Predators
+  - Obstacles
+  - BoidsObstacles
+  - PredatorsObstacles
   - 
   - 
   - 
