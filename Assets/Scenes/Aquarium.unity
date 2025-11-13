@@ -5624,7 +5624,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClassroomTextureReceiver
   baseMat: {fileID: 2100000, guid: da06d2a17ec32444d9780f6937d34b0e, type: 2}
   managerScript: {fileID: 964278842}
-  numToAdd: 5
+  loadSavedFish: 1
+  numToAdd: 3
 --- !u!1001 &1686430154
 PrefabInstance:
   m_ObjectHideFlags: 0
