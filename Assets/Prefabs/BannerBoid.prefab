@@ -25,8 +25,8 @@ Transform:
   m_GameObject: {fileID: 1158053670900863143}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49991274, y: 0.50008726, z: 0.49991274, w: 0.50008726}
-  m_LocalPosition: {x: 0, y: 0, z: -0.25}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalPosition: {x: 0, y: 0, z: -0.05}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7368591783808266333}
@@ -366,74 +366,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5ffb76842798b9479667375310229d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BoidScript
-  boidsParams:
-    prefab: {fileID: 6968800472965017856}
-    scaleVariations: 0.2
-    spawnAreaGO: {fileID: 0}
-    spawnArea: {fileID: 0}
-    raycastBaseDistance: 10
-    obstacleBaseMargin: 3
-    applyVelocityFactor: 1
-    obstaclesLayerMask:
-      serializedVersion: 2
-      m_Bits: 384
-    acceleration: 7.5
-    emergencyAcceleration: 30
-    velocityBonusFactorChangePeriod: 5
-    nbCalculationsBetweenVelocityBonusFactorChange: 25
-    minVelocityBonusFactor: 0.8
-    maxVelocityBonusFactor: 1.2
-    rwStatePeriod: 5
-    rwMomentumWeight: 1
-    rwProbaStraightLine: 0.2
-    rwVerticalRestriction: 0.5
-    rwMaxAttempts: 3
-    visionDistance: 8
-    visionSemiAngle: 100
-    cosVisionSemiAngle: -0.1736482
-    momentumWeight: 1.7
-    defaultState: 0
-    boneBaseDistanceToHead:
-    - 0
-    - 0.91853434
-    - 1.858463
-    - 2.9823477
-    - 3.975088
-    nbTransformsToStore: 60
-    boneBaseRotation:
-    - {x: -0.46479976, y: 0.53287935, z: -0.46498632, w: 0.53271806}
-    - {x: -0.4727714, y: 0.5258199, z: -0.47295558, w: 0.5256557}
-    - {x: -0.50082755, y: 0.49917042, z: -0.50100243, w: 0.49899626}
-    - {x: -0.4915118, y: 0.50834584, z: -0.49168986, w: 0.508175}
-    - {x: -0.5081935, y: 0.4916693, z: -0.50836587, w: 0.4914927}
-    animationFirstBone: 1
-    avoidanceDirectionPreferences:
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    - 1
-    separationBaseWeight: 0.7
-    alignmentBaseWeight: 1
-    cohesionBaseWeight: 1
-    fearBaseWeight: 3
-    separationRadius: 1.5
-    cohesionRadius: 3.5
-    fearRadius: 10
-    squaredSeparationRadius: 2.25
-    squaredCohesionRadius: 12.25
-    squaredFearRadius: 100
-    squaredFullSeparationRadius: 0.25
-    squaredFullCohesionRadius: 20.25
-    squaredFullFearRadius: 81
-    idealNbNeighbors: 6
-    nbBoidsNearbyToBeAlone: 3
-    normalVelocity: 5
-    aloneVelocity: 8
-    afraidVelocity: 11
 --- !u!135 &4200762017918847734
 SphereCollider:
   m_ObjectHideFlags: 0
