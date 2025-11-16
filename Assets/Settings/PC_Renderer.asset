@@ -31,7 +31,7 @@ MonoBehaviour:
     depthCompareFunction: 4
     enableWrite: 1
     stencilSettings:
-      overrideStencilState: 0
+      overrideStencilState: 1
       stencilReference: 0
       stencilCompareFunction: 8
       passOperation: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: FullScreenPassRendererFeature
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.FullScreenPassRendererFeature
   m_Active: 1
-  injectionPoint: 450
+  injectionPoint: 550
   fetchColorBuffer: 1
   requirements: 0
   passMaterial: {fileID: 2100000, guid: 300eb6580c147ab478e76dfdf411886e, type: 2}
