@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Aquarium.unity
+    guid: 91dabc142dcfda3418c0301c23183c01
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: dfad98e2083721a4ba9637655c83cc00, type: 2}
     com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 3b119e9a153fb7446ad408dec40b1191, type: 2}
